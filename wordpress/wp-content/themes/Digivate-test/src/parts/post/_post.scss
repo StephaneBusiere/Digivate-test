@@ -5,3 +5,26 @@
   border: 1px solid var(--highlight);
   padding: var(--gutters);
 }
+
+/*--------------------------------------------------------------
+# Post Hero banner design
+--------------------------------------------------------------*/
+
+.hero-banner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  .hero-banner-description {
+    max-width: 400px;
+
+    .hero-banner-title {
+      font-size:3.2rem;
+      font-weight: bold;
+      color:#6C63FF;
+      text-transform: uppercase;
+    }
+    .hero-banner-text {
+      font-size:2.7rem;
+    }
+  }
+}

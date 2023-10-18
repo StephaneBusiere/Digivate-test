@@ -41,21 +41,23 @@
   .site-top .menu, .horizontal-menu .menu {
 
     li {
-      color: white;
-      font-weight: bold;
+      color: black;
+      text-transform: uppercase;
+      font-size:2.2rem;
+      margin-right:30px;
     }
 
     //top level items:
     .top-level-item {
 
       &.current-menu-item .menu-item-link{
-        color: var(--main-text-color);
+        color: #6c63ff;;
       }
 
       //top level menu item turned on or hovered on, or item within is hovered on
       &.toggled-on, &:focus-within {
         background: transparent;
-        color: black;
+        color: #6c63ff;
 
         //open submenu if there is one.
         & > .sub-menu, & > .children {

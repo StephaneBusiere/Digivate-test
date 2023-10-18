@@ -72,7 +72,7 @@ You should also install Advanced Custom Fields Pro as Ignition works best with i
     "admin_access_capability": "manage_options", //capability of who can access back end
     "load_custom_icons": false, //now that we use iconify.design you might not need to load any custom icons, although you can still add them
     "mobile_menu_type": "app-menu", //fancy mobile menu, leave blank for regular
-    "logo_position": "logo-left", //logo position with menu
+    "logo_position": "logo-center", //logo position with menu
     "site_top_container": "container", //contain the menu and logo takes container, container-fluid or nothing
     "default_acf_header_block" : ["post", "page"] //create default header block for these post types (assumes they use Gutenberg)
 }

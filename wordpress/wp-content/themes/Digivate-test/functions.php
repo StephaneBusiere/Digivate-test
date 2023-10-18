@@ -398,3 +398,55 @@ require_once get_parent_theme_file_path( '/inc/core/dev-helpers.php' );
 //Ignition will also search two directories deep for more underscored files within inc, blocks, and post-types folders.
 // (ie: inc/acf-extras/_acf-extras.php )
 
+class Menu_Middle_Logo extends Walker_Nav_Menu {
+    function end_el (&$output, $item, $depth = 0, $args = [], $id = 0) {
+        parent::end_el($output, $item, $depth, $args, $id);
+        
+        // the menu slug
+        $theme_location = 'top-menu';
+        
+        // check for top level depth and if correct menu
+        if ($depth === 0 && isset($args->menu) && isset($args->menu->slug) && $args->menu->slug === $theme_location) {
+            // get current menu items
+            $menu_items = wp_get_nav_menu_items($theme_location);
+            
+            // will indicate how many top level menu items we have
+            $parent_menu_items = [];
+            
+            // get top level menu items
+            foreach ($menu_items as $menu_item) {
+                if ($menu_item->menu_item_parent == 0) $parent_menu_items[] = $menu_item;
+            }
+            
+            // get total menu items halved
+            $half_menu_items = floor(count($parent_menu_items) / 2);
+            
+            // the menu item we want to add the logo to
+            // before or after, depends if menu items are odd or even
+            if (is_float($half_menu_items)) {
+                // if you have odd menu items lets say three this will add after the first
+                // [1] [custom html] [2] [3]
+                // if you want it to add after the second remove the - 1, this will result in
+                // [1] [2] [custom html] [3]
+                $middle_item = $parent_menu_items[$half_menu_items - 1];
+            } elseif (is_int($half_menu_items)) {
+                // this handles even menu items
+                $middle_item = $parent_menu_items[$half_menu_items - 1];
+            }
+            
+            // if current menu item is middle item, add our custom html
+            if (isset($middle_item) && $middle_item->ID === $item->ID) {
+                $output .= '<li class="my-logo">';
+                
+                ob_start();
+                the_custom_logo();
+                // this is for testing because the_custom_logo()
+                // is not available in my theme
+                // echo 1234; 
+                $output .= ob_get_clean();
+                
+                $output .= '</li>';
+            }
+        }
+    }
+}

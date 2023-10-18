@@ -14,7 +14,7 @@
 --------------------------------------------------------------*/
 :root {
   //Fonts. change to the fonts you want. Defaults to OS Fonts. Load google fonts via theme.config.json
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font: "montserat", sans-serif;
   --font-alt: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; //for headings etc..
   --line-height: 1.5;
   --font-pre: 'Source Code Pro', monospace;
@@ -35,7 +35,7 @@
   --body-bg: white; //found in page.scss
   --main-text-color: var(--black); //used in various files
   --subtle-text-color: var(--grey); //used in forms.scss and page.scss
-  --site-top: var(--dark-blue);
+  --site-top: white;
   --footer-bg: var(--dark-grey); //found in page.scss
   --header-bg: var(--dark-grey); //found in page.scss
 
@@ -60,7 +60,7 @@
   --desktop-menu-alignment: center; //can be flex-end or flex-start or center for top level menu-items positioning on desktop
 
   /*------- Layout --------*/
-  --container: 1200px; //holds site in a centered container of this size
+  --container: 1600px; //holds site in a centered container of this size
   --container-content: 70rem; //holds article text for nice reading
   --container-padding: 30px; //used on left and right side of containers
 

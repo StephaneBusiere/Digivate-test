@@ -1,16 +1,22 @@
+<?PHP
+$post_hero_banner_title = get_field( 'post_hero_banner_title' );
+$post_hero_banner_text  = get_field( 'post_hero_banner_text' );
+$post_hero_banner_image = get_field( 'post_hero_banner_image' );
+?>
+
+
+
+
 <div class="hero-banner-container">
 	<div class="hero-banner-description">
 		<h3 class="hero-banner-title">
-			company name
+			<?php echo wp_kses_post( $post_hero_banner_title ); ?>
 		</h3>
 		<p class="hero-banner-text">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		</p>
-		<p class="hero-banner-text">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			<?php echo wp_kses_post( $post_hero_banner_text ); ?>
 		</p>
 	</div>
 	<div class="hero-banner-image-container">
-		<img class="hero-banner-image" src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-image.svg" alt="">
+		<img class="hero-banner-image" src="<?php echo esc_url( $post_hero_banner_image ); ?>" alt="">
 	</div>
 </div>

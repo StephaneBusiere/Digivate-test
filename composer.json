@@ -8,13 +8,18 @@
     ],
     "require": {
         "johnpbloch/wordpress": "^6.3",
-        "drupal-composer/preserve-paths": "^0.1.6",
-        "wpackagist-plugin/advanced-custom-fields":"6.2.1"
+        "drupal-composer/preserve-paths": "^0.1.6"
+        
     },
+    "require-dev": {
+      "wpackagist-plugin/advanced-custom-fields":"6.2.1"
+      
+  },
     "config": {
         "allow-plugins": {
             "johnpbloch/wordpress-core-installer": true,
-            "drupal-composer/preserve-paths": true
+            "drupal-composer/preserve-paths": true,
+            "composer/installers": true
         }
     },
     "extra": {
@@ -28,7 +33,9 @@
         },
         "wordpress-install-dir": "wordpress",
         "preserve-paths": [
-          "wordpress/wp-content/themes/Digivate-test"
+          "wordpress/wp-content/themes/Digivate-test",
+          "wordpress/wp-content/uploads"
+          
         ]
       }
 }

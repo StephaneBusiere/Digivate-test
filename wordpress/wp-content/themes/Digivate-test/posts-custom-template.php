@@ -14,10 +14,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<?php
-			while ( have_posts() ) : the_post();
-				ign_template('content');
+			while ( have_posts() ) :
+				the_post();
+				ign_template( 'content' );
 			endwhile;
-			ign_template('src/parts/post/hero-banner.php'); 
+			ign_template( 'src/parts/post/hero-banner.php' );
 			?>
 		</main>
 	</div>

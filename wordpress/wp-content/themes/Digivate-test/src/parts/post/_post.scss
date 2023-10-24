@@ -5,6 +5,7 @@
 /*--------------------------------------------------------------
 # Post Card design
 --------------------------------------------------------------*/
+
 .post.card-item{
   border: 1px solid var(--highlight);
   padding: var(--gutters);
@@ -39,12 +40,13 @@
     }
   }
 }
+
 /*--------------------------------------------------------------
 # Post archive design
 --------------------------------------------------------------*/
 
 
-.realisation-section {
+.posts-archive-section {
   margin: 40px auto 0 auto;
   position: relative;
   .loader-container {
@@ -100,11 +102,11 @@
   font-size: 14px;
   text-transform: uppercase;
 }
-.realisations-left {
+.posts-archives-left {
   width: 500px;
   height: auto;
 }
-.realisations-slogan {
+.posts-archives-slogan {
   font-family: "Ubuntu";
   font-size: 12px;
   text-transform: uppercase;
@@ -112,22 +114,22 @@
   border-bottom: 1px solid #000;
 }
 
-.realisations-title {
+.posts-archives-title {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.realisations-title > a {
+.posts-archives-title > a {
   color: black;
   text-decoration: none;
 }
-.realisations-button {
+.posts-archives-button {
   width: 183px;
   height: 48px;
   background-color: var(--red);
   text-align: center;
 }
 
-.realisations-button > a {
+.posts-archives-button > a {
   color: white;
   position: relative;
   top: 10px;
@@ -137,7 +139,7 @@
   text-decoration: none;
 }
 
-.realisations-wrapper {
+.posts-archives-wrapper {
   padding: 0 80px 40px 0px;
   visibility: visible;
   opacity: 1;
@@ -148,7 +150,7 @@
       transition: visibility 0s 2s, opacity 2s linear;
 
     }
-  .realisations-container {
+  .posts-archives-container {
     width: 100%;
     height: 215px;
     display: flex;
@@ -166,24 +168,24 @@
         opacity: 0;
         transition: visibility 0s 2s, opacity 2s linear;
         }
-      .realisations-text-left {
+      .posts-archives-text-left {
         min-width: 280px;
       }
-      .realisations-category-container {
+      .posts-archives-category-container {
         display:flex;
-        .realisations-category {
+        .posts-archives-category {
           border:1px solid black;
           margin: 20px 20px 0 0;
           padding: 1px 9px;
           width: max-content;
         }
       }
-      .realisations-thumbnail {
+      .posts-archives-thumbnail {
         max-width: 330px;
         position: relative;
       }
   
-      .realisations-thumbnail img {
+      .posts-archives-thumbnail img {
         width: 100%;
         height: 100%;
 
@@ -193,8 +195,62 @@
 }
 
 }
+
+@media(max-width: 1270px) {
+
+  .hero-banner-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    max-width: 80%;
+    margin: 40px auto 0 auto;
+      .hero-banner-description {
+        flex-basis: 50%;
+        text-align: center;
+        .hero-banner-title {
+          font-size: 2.8rem;
+        }
+
+        .hero-banner-text {
+          font-size: 2.4rem;
+        }
+  
+      }
+     
+    .hero-banner-image-container {
+      flex-basis: 50%;
+      .hero-banner-image {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media(max-width: 1070px) {
+
+  .hero-banner-container {
+    margin: 70px auto 0 auto;
+      .hero-banner-description {
+        .hero-banner-title {
+          font-size: 2.6rem;
+        }
+        .hero-banner-text {
+          max-width: 350px;
+          font-size: 2.2rem;
+        }
+      }
+      .hero-banner-image-container {
+        flex-basis: 50%;
+        .hero-banner-image {
+          width: 100%;
+        }
+      }
+  }
+}
+
 @media  (max-width: $media-nav) {
-  .realisation-section {
+
+  .posts-archive-section {
     .filter-container {
       flex-direction: column;
       padding: 40px 20px;
@@ -203,14 +259,15 @@
         margin-bottom: 10px;
       }
     }
-    .realisations-wrapper {
+
+    .posts-archives-wrapper {
       padding: 0 20px 40px 20px;
-      .realisations-container {
-        .realisations-category-container {
+      .posts-archives-container {
+        .posts-archives-category-container {
          display:block;
          max-width: fit-content;
         }
-        .realisations-thumbnail {
+        .posts-archives-thumbnail {
           height: 145px;
           position: relative;
           max-width: 50%;
@@ -218,12 +275,54 @@
       }
     }
   }
+
+  .hero-banner-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+      .hero-banner-description {
+        .hero-banner-title {
+          font-size: 2.6rem;
+        }
+        .hero-banner-text {
+          max-width: 350px;
+          font-size: 2.2rem;
+        }
+      }
+      .hero-banner-image-container {
+        flex-basis: 50%;
+        .hero-banner-image {
+          width: 50%;
+          margin: 0 auto;
+          display: flex;
+        }
+      }
+  }
 }
 
 @media (max-width: 600px) {
-  .realisation-section .realisations-wrapper .realisations-container .realisations-text-left {
+  .posts-archive-section .posts-archives-wrapper .posts-archives-container .posts-archives-text-left {
     min-width: 35%;
-}
+  }
+  .hero-banner-container {
+      .hero-banner-description {
+        .hero-banner-title {
+          font-size: 2.6rem;
+        }
+        .hero-banner-text {
+          max-width: 350px;
+          font-size: 2.2rem;
+        }
+      }
+      .hero-banner-image-container {
+        flex-basis: 50%;
+        .hero-banner-image {
+          width: 80%;
+          margin: 0 auto;
+          display: flex;
+        }
+      }
+  }
 }
 
 

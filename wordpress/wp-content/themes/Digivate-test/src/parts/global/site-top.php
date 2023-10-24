@@ -13,7 +13,7 @@
 <div class="site-top <?php echo ign_get_config( 'logo_position', 'logo-right' ); ?>">
     <div class="site-top-container <?php echo ign_get_config( 'site_top_container', 'container' ); ?>">
         <div class="site-navigation horizontal-menu flex">
-			<!-- <?php echo ign_logo(); ?> -->
+			<?php echo ign_logo(); ?>
 
             <div class="site-navigation__nav-holder" data-moveto="#panel-left" data-moveat="--nav-move"
                  data-moveto-pos="0">

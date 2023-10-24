@@ -114,7 +114,7 @@
 		top: 30%;
 		height: 3px;
 		width: 100%;
-		background: white;
+		background: black;
 		transition: all .5s;
 		outline: none;
 		border-radius: inherit;
@@ -141,3 +141,9 @@
 	}
 }
 
+@media(max-width: 1070px) {
+	.panel-left-toggle {
+		left: 10px;
+		top: 10px;
+	}
+}

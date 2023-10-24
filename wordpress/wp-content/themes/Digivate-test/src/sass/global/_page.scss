@@ -16,16 +16,7 @@ body {
 }
 
 .site-logo {
-  font-size: 3.3rem; //if its a text logo
-  text-transform: uppercase;
-
-
-  color: white;
-  max-width: 60px;
-
-  svg, path, g {
-	fill: currentColor; //uses color above
-  }
+  display:none;
 }
 
 .site-navigation .site-logo {
@@ -121,4 +112,23 @@ body {
     text-shadow: 1px 1px white;
     margin-bottom: var(--gap);
   }
+}
+@media(max-width: 1270px) {
+  .logo-central img {
+    max-width: 80px;
+  }
+
+}
+
+@media  (max-width: 1070px) {
+  .logo-central img {
+    display:none;
+}
+.site-logo {
+  font-size: 3.3rem; //if its a text logo
+  text-transform: uppercase;
+  display:block;
+  max-width: 60px;
+
+}
 }

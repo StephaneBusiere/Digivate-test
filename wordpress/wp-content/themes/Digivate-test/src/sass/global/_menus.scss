@@ -176,3 +176,15 @@
 
 
 
+@media(max-width: 1530px) {
+  .site-top .menu li, .horizontal-menu .menu li {
+    margin-right: 0px;
+}
+}
+
+@media(max-width: 1270px) {
+  .site-top .menu li, .horizontal-menu .menu li {
+    font-size: 1.8rem;
+}
+
+}

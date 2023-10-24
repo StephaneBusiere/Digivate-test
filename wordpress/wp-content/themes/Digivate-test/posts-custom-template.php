@@ -19,6 +19,7 @@ get_header(); ?>
 				ign_template( 'content' );
 			endwhile;
 			ign_template( 'src/parts/post/hero-banner.php' );
+			ign_template( 'src/parts/post/custom-posts-archive.php' );
 			?>
 		</main>
 	</div>

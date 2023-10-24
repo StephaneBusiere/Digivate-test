@@ -22,8 +22,9 @@ wordpress/wp-content/themes/*
 # wp-content
 wordpress/wp-content/languages/*
 wordpress/wp-content/upgrade/*
-wordpress/wp-content/uploads/*
+
 
 #utils
 wordpress/Search-Replace-DB-master/*
+wordpress/wp-content/backups-dup-lite/*
 
